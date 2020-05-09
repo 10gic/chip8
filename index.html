@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chip-8</title>
+    <style type="text/css">
+        button, select {
+            width: 100px;
+            height: 30px;
+            outline: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button:focus {outline: none;}
+        .array {
+            padding: 5px;
+        }
+        .memory {
+            width: 280px;
+            padding: 5px;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+        .registers {
+            width: 100px;
+            padding: 5px;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <span>ROM:</span>
+    <select id="roms">
+        <option value="TETRIS">TETRIS</option><option value="WIPEOFF">WIPEOFF</option><
+    </select>
+    <button id="run-button">Start</button>
+    <button id="step-button">Step</button>
+    <button id="restart-button">Restart</button>
+    <a href="https://github.com/10gic/chip8">Source Code</a>
+</div>
+<p>
+For TETRIS, W = left, E = right, R = fall faster, Q = rotate piece.
+For WIPEOFF, Q = left, E = right.
+</p>
+<canvas id="chip8-canvas" width="640" height="320"></canvas>
+<div class="container">
+    <a class="array">&rArr;</a>
+    <div class="memory" id="memory"></div>
+    <div class="registers" id="register-v"></div>
+    <div class="registers" id="register-others"></div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>

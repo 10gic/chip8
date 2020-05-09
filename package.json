@@ -1,0 +1,29 @@
+{
+  "name": "chip8",
+  "version": "1.0.0",
+  "description": "A chip8 emulator",
+  "main": "main.js",
+  "dependencies": {
+    "browserify": "^16.5.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "build": "browserify src/main.js -o bundle.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cig01/chip8.git"
+  },
+  "keywords": [
+    "emulator"
+  ],
+  "author": "cig01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cig01/chip8/issues"
+  },
+  "homepage": "https://github.com/cig01/chip8#readme"
+}
